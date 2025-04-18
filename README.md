@@ -1,6 +1,6 @@
 # Freedom QR Provider SDK
 
-[![](https://jitpack.io/v/freedompay-global/freedom-qr-provider-android-sdk.svg)](https://jitpack.io/#freedompay-global/freedom-qr-provider-android-sdk)
+[![](https://jitpack.io/v/PayBox/freedom-qr-provider-sdk.svg)](https://jitpack.io/#PayBox/freedom-qr-provider-sdk)
 
 Freedom QR Provider - SDK для получения платежного QR кода, а так же взаимодействия с API Freedom Pay.
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation "com.github.freedompay-global:freedom-qr-provider-android-sdk:${version}"
+    implementation "com.github.freedompay-global:freedom-qr-provider-sdk:${version}"
 }
 ```
 `version` - текущая версия SDK.
@@ -59,12 +59,19 @@ dependencies {
 
 Для инициализации SDK в вашем фрагменте или активити необходимо создать объект:
 ```kotlin 
-private val sdk = FreedomQrProvider.initialize(secretKey, merchantId)
+private val sdk = FreedomQrProvider.initialize(secretKey, merchantId, region)
 ```
 
 `secretKey: String` - секретный ключ, который выдается при подключения мерчанта в личном кабинете.
 
 `merchanId: String` - уникальный идентификатор, который присваивается мерчанту после создания аккаунта.
+
+`region: Region` - enum параметр, определяющий региональный домен для формирования API запросов. Поддерживаемые значения: 
+- `Region.KZ` - Казахстан
+- `Region.UZ` - Узбекистан 
+- `Region.KG` - Кыргызстан.
+
+По умолчанию используется Domain.KZ.
 
 ### Инициализация запросов
 
