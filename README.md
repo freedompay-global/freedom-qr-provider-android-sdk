@@ -59,12 +59,19 @@ dependencies {
 
 Для инициализации SDK в вашем фрагменте или активити необходимо создать объект:
 ```kotlin 
-private val sdk = FreedomQrProvider.initialize(secretKey, merchantId)
+private val sdk = FreedomQrProvider.initialize(secretKey, merchantId, region)
 ```
 
 `secretKey: String` - секретный ключ, который выдается при подключения мерчанта в личном кабинете.
 
 `merchanId: String` - уникальный идентификатор, который присваивается мерчанту после создания аккаунта.
+
+`region: Region` - enum параметр, определяющий региональный домен для формирования API запросов. Поддерживаемые значения: 
+- `Region.KZ` - Казахстан
+- `Region.UZ` - Узбекистан 
+- `Region.KG` - Кыргызстан.
+
+По умолчанию используется Domain.KZ.
 
 ### Инициализация запросов
 
@@ -305,4 +312,4 @@ sdk.refundPayment(invoiceId, refundAmount,
 
 ## Поддержка
 
-- По возникающим вопросам просьба обращаться на [support@freedompay.money](mailto:support@freedompay.money)
+- По возникающим вопросам просьба обращаться на [support@freedompay.kz](mailto:support@freedompay.kz)
