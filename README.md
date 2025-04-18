@@ -1,6 +1,6 @@
 # Freedom QR Provider SDK
 
-[![](https://jitpack.io/v/PayBox/freedom-qr-provider-sdk.svg)](https://jitpack.io/#PayBox/freedom-qr-provider-sdk)
+[![](https://jitpack.io/v/freedompay-global/freedom-qr-provider-android-sdk.svg)](https://jitpack.io/#freedompay-global/freedom-qr-provider-android-sdk)
 
 Freedom QR Provider - SDK для получения платежного QR кода, а так же взаимодействия с API Freedom Pay.
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation "com.github.freedompay-global:freedom-qr-provider-sdk:${version}"
+    implementation "com.github.freedompay-global:freedom-qr-provider-android-sdk:${version}"
 }
 ```
 `version` - текущая версия SDK.
@@ -312,4 +312,4 @@ sdk.refundPayment(invoiceId, refundAmount,
 
 ## Поддержка
 
-- По возникающим вопросам просьба обращаться на [support@freedompay.money](mailto:support@freedompay.money)
+- По возникающим вопросам просьба обращаться на [support@freedompay.kz](mailto:support@freedompay.kz)
